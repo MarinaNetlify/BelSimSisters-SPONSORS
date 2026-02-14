@@ -69,10 +69,6 @@ export function Partners() {
             ))}
           </div>
 
-          <p className="text-white font-bold font-body text-lg leading-relaxed">
-            This is not a narrow "sports project."<br />
-            This is a media story with broad social engagement.
-          </p>
         </Subsection>
 
         <Subsection title="WHERE & HOW WE SHOW UP" delay={0.1}>
@@ -117,13 +113,6 @@ export function Partners() {
         </Subsection>
 
         <Subsection title="WHAT THE PARTNER RECEIVES" delay={0.2}>
-          <p className="text-xl text-gray-300 font-body leading-relaxed mb-4">
-            Partnering with Belswimsisters is not logo placement.
-          </p>
-          <p className="text-xl text-gray-300 font-body leading-relaxed mb-12">
-            It is strategic integration into a historic international project with strong values and narrative depth.
-          </p>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <BenefitBlock
               icon={Shirt}

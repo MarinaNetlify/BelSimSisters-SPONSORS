@@ -36,22 +36,12 @@ export function Mission() {
 
           <motion.p
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-headline font-bold leading-tight mb-12"
+            className="text-4xl md:text-6xl font-headline font-bold leading-tight"
           >
-            SIX WOMEN. ONE MISSION. ONE TEAM.{' '}
+            SIX WOMEN. ONE MISSION.{' '}
             <span className="text-electric">CROSS THE ENGLISH CHANNEL</span> AS
             THE FIRST BELARUSIANS.
           </motion.p>
-
-          <motion.div
-            variants={itemVariants}
-            className="space-y-8 text-xl md:text-2xl text-gray-300 font-light max-w-2xl"
-          >
-            <p>
-              We are{' '}
-              <span className="text-white font-bold">BELSWIMSISTERS</span>.
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </section>
