@@ -38,9 +38,9 @@ export function Mission() {
             variants={itemVariants}
             className="text-4xl md:text-6xl font-headline font-bold leading-tight mb-12"
           >
-            SIX WOMEN. ONE MISSION.{' '}
+            SIX WOMEN. ONE MISSION. ONE TEAM.{' '}
             <span className="text-electric">CROSS THE ENGLISH CHANNEL</span> AS
-            A RELAY TEAM.
+            THE FIRST BELARUSIANS.
           </motion.p>
 
           <motion.div
@@ -48,13 +48,8 @@ export function Mission() {
             className="space-y-8 text-xl md:text-2xl text-gray-300 font-light max-w-2xl"
           >
             <p>
-              No wetsuits. No shortcuts. Just grit, cold water, and an
-              unbreakable bond.
-            </p>
-            <p>
               We are{' '}
-              <span className="text-white font-bold">Belswimsisters</span>. We
-              will be the first Belarusians to cross the English Channel.
+              <span className="text-white font-bold">BELSWIMSISTERS</span>.
             </p>
           </motion.div>
         </motion.div>

@@ -93,7 +93,7 @@ function StatBlock({
 
       <div className="absolute top-0 right-0 w-8 h-8 bg-electric opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-      <div className="text-7xl md:text-8xl font-headline font-bold mb-2 group-hover:text-electric transition-colors duration-300">
+      <div className="text-5xl md:text-6xl font-headline font-bold mb-2 group-hover:text-electric transition-colors duration-300 whitespace-nowrap">
         {displayOverride ||
         <>
             {count}
