@@ -1,55 +1,55 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Waves, Thermometer, Clock, MapPin, Target } from 'lucide-react'
+import { useT } from '../i18n/LanguageContext'
 
-const TIMELINE = [
-  {
-    phase: 'PREPARATION',
-    title: 'OPEN WATER TRAINING',
-    date: 'NOW — MAY 2026',
-    icon: Waves,
-    desc: 'Weekly cold water sessions, building endurance and acclimatizing to Channel conditions. Each swimmer must qualify with a 6-hour observed swim.',
-  },
-  {
-    phase: 'ACCLIMATIZATION',
-    title: 'COLD WATER ADAPTATION',
-    date: 'JAN — JUNE 2026',
-    icon: Thermometer,
-    desc: 'Progressive exposure to 15–16°C water temperatures without wetsuits. Building tolerance for the Channel crossing conditions.',
-  },
-  {
-    phase: 'FINAL PREP',
-    title: 'TEAM REHEARSALS',
-    date: 'MAY — JUNE 2026',
-    icon: Clock,
-    desc: 'Relay changeover practice, boat-to-swimmer coordination, feeding strategy rehearsals, and night swimming sessions.',
-  },
-  {
-    phase: 'TRAVEL',
-    title: 'ARRIVE IN DOVER',
-    date: 'MID-JUNE 2026',
-    icon: MapPin,
-    desc: 'Team assembles in Dover, England. Final briefings with the Channel Swimming Association pilot and support crew.',
-  },
-  {
-    phase: 'SWIM WINDOW',
-    title: 'THE CROSSING',
-    date: 'JUNE 21 — JUNE 30, 2026',
-    icon: Target,
-    desc: 'Our assigned swim window. The team waits for optimal tide and weather conditions, then swims the English Channel as a relay — approximately 40–70 km depending on currents.',
-  },
-]
+const ICONS = [Waves, Thermometer, Clock, MapPin, Target]
 
 export function VisibilityPlan() {
+  const { t } = useT()
+
+  const phases = [
+    {
+      phase: t('training.phases.0.phase'),
+      title: t('training.phases.0.title'),
+      date: t('training.phases.0.date'),
+      desc: t('training.phases.0.desc'),
+    },
+    {
+      phase: t('training.phases.1.phase'),
+      title: t('training.phases.1.title'),
+      date: t('training.phases.1.date'),
+      desc: t('training.phases.1.desc'),
+    },
+    {
+      phase: t('training.phases.2.phase'),
+      title: t('training.phases.2.title'),
+      date: t('training.phases.2.date'),
+      desc: t('training.phases.2.desc'),
+    },
+    {
+      phase: t('training.phases.3.phase'),
+      title: t('training.phases.3.title'),
+      date: t('training.phases.3.date'),
+      desc: t('training.phases.3.desc'),
+    },
+    {
+      phase: t('training.phases.4.phase'),
+      title: t('training.phases.4.title'),
+      date: t('training.phases.4.date'),
+      desc: t('training.phases.4.desc'),
+    },
+  ]
+
   return (
     <section className="py-32 bg-white text-black relative clip-diagonal-reverse">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
           <h2 className="text-6xl md:text-8xl font-headline font-black tracking-tighter">
-            TRAINING PLAN
+            {t('training.title')}
           </h2>
           <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto font-body">
-            From preparation to the swim window: June 21 — June 30, 2026
+            {t('training.subtitle')}
           </p>
         </div>
 
@@ -57,8 +57,8 @@ export function VisibilityPlan() {
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gray-200 transform md:-translate-x-1/2" />
 
           <div className="space-y-12 md:space-y-24">
-            {TIMELINE.map((item, index) => (
-              <TimelineItem key={index} item={item} index={index} />
+            {phases.map((item, index) => (
+              <TimelineItem key={index} item={item} index={index} icon={ICONS[index]} />
             ))}
           </div>
         </div>
@@ -67,7 +67,7 @@ export function VisibilityPlan() {
   )
 }
 
-function TimelineItem({ item, index }: { item: any; index: number }) {
+function TimelineItem({ item, index }: { item: any; index: number; icon?: any }) {
   const isEven = index % 2 === 0
   return (
     <motion.div

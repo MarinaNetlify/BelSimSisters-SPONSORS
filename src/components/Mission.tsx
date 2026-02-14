@@ -1,7 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useT } from '../i18n/LanguageContext'
 
 export function Mission() {
+  const { t } = useT()
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -31,16 +33,16 @@ export function Mission() {
             variants={itemVariants}
             className="text-electric text-xl font-bold tracking-widest mb-8"
           >
-            THE MISSION
+            {t('mission.label')}
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
             className="text-4xl md:text-6xl font-headline font-bold leading-tight"
           >
-            SIX WOMEN. ONE MISSION.{' '}
-            <span className="text-electric">CROSS THE ENGLISH CHANNEL</span> AS
-            THE FIRST BELARUSIANS.
+            {t('mission.text1')}{' '}
+            <span className="text-electric">{t('mission.text2')}</span>{' '}
+            {t('mission.text3')}
           </motion.p>
         </motion.div>
       </div>
