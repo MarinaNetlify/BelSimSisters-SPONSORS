@@ -108,6 +108,7 @@ export const translations = {
       sponsorshipTitle: 'SPONSORSHIP PACKAGE',
       sponsorshipPrice: '$5,000',
       sponsorshipDesc: 'Starting partnership package',
+      ctaButton: 'BECOME A SPONSOR',
     },
     training: {
       title: 'TRAINING PLAN',
@@ -262,6 +263,7 @@ export const translations = {
       sponsorshipTitle: 'СПОНСОРСКИЙ ПАКЕТ',
       sponsorshipPrice: '$5,000',
       sponsorshipDesc: 'Стартовый партнёрский пакет',
+      ctaButton: 'СТАТЬ СПОНСОРОМ',
     },
     training: {
       title: 'ПЛАН ПОДГОТОВКИ',
@@ -416,6 +418,7 @@ export const translations = {
       sponsorshipTitle: 'СПОНСАРСКІ ПАКЕТ',
       sponsorshipPrice: '$5,000',
       sponsorshipDesc: 'Стартавы партнёрскі пакет',
+      ctaButton: 'СТАЦЬ СПОНСАРАМ',
     },
     training: {
       title: 'ПЛАН ПАДРЫХТОЎКІ',

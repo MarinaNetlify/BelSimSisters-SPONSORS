@@ -156,6 +156,21 @@ export function Partners() {
               {t('partners.itIsA')} <span className="text-electric">{t('partners.reputationalAsset')}</span>.
             </p>
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="mt-12 flex justify-center"
+          >
+            <a
+              href="mailto:romanovich.m.a@gmail.com"
+              className="inline-block bg-electric text-white px-12 py-5 text-xl md:text-2xl font-headline font-bold tracking-wider hover:bg-white hover:text-black transition-colors duration-300 skew-x-[-10deg] shadow-2xl"
+            >
+              <span className="block skew-x-[10deg]">{t('partners.ctaButton')}</span>
+            </a>
+          </motion.div>
         </Subsection>
       </div>
     </section>
