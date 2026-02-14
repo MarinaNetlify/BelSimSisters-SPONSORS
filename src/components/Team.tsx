@@ -1,18 +1,17 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { User } from 'lucide-react'
 
 const TEAM_MEMBERS = [
-  { name: 'MARYNA SHYNKARENKA', role: 'LONDON, UNITED KINGDOM' },
-  { name: 'ULYANA ZARUBINA', role: 'LAGUNA NIGUEL, USA' },
-  { name: 'ALENA HRYHORYEVA', role: 'SARASOTA, USA' },
-  { name: 'DARYA SLIZH', role: 'VILNIUS, LITHUANIA' },
-  { name: 'ANASTASIA LITVINENKO', role: 'VILNIUS, LITHUANIA' },
-  { name: 'MARYIA KOLESAVA-HUDZILINA', role: 'VILNIUS, LITHUANIA' },
+  { name: 'MARYNA SHYNKARENKA', role: 'LONDON, UNITED KINGDOM', image: '/images/marina.jpg' },
+  { name: 'ULYANA ZARUBINA', role: 'LAGUNA NIGUEL, USA', image: '/images/ulyana.jpg' },
+  { name: 'ALENA HRYHORYEVA', role: 'SARASOTA, USA', image: '/images/alena.jpg' },
+  { name: 'DARYA SLIZH', role: 'VILNIUS, LITHUANIA', image: '/images/darya.jpg' },
+  { name: 'ANASTASIA LITVINENKO', role: 'VILNIUS, LITHUANIA', image: '/images/nastia.jpg' },
+  { name: 'MARYIA KOLESAVA-HUDZILINA', role: 'VILNIUS, LITHUANIA', image: '/images/masha.jpg' },
 ]
 
 const SUPPORT = [
-  { name: 'YURY YURCHANKA', role: 'WARSAW, POLAND' },
+  { name: 'YURY YURCHANKA', role: 'WARSAW, POLAND', image: '/images/yura.jpg' },
 ]
 
 export function Team() {
@@ -57,7 +56,7 @@ function TeamCard({
   member,
   index,
 }: {
-  member: { name: string; role: string }
+  member: { name: string; role: string; image: string }
   index: number
 }) {
   return (
@@ -68,9 +67,11 @@ function TeamCard({
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group relative bg-zinc-900 aspect-[3/4] overflow-hidden"
     >
-      <div className="absolute inset-0 flex items-center justify-center bg-zinc-800 group-hover:bg-zinc-800/50 transition-colors duration-500">
-        <User className="w-48 h-48 text-zinc-700 group-hover:text-electric/50 transition-colors duration-500" />
-      </div>
+      <img
+        src={member.image}
+        alt={member.name}
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      />
 
       <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black via-black/50 to-transparent">
         <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
