@@ -64,7 +64,7 @@ export function Hero() {
               duration: 0.8,
               delay: 0.6
             }}
-            className="absolute bottom-0 left-0 w-full h-2 md:h-4 bg-electric -skew-y-2 origin-left" />
+            className="relative mt-2 w-full h-2 md:h-4 bg-electric -skew-y-2 origin-left" />
 
         </motion.div>
 

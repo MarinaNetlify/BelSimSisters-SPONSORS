@@ -25,6 +25,13 @@ const TIMELINE = [
     desc: 'Offline diaspora meetups, founder community talks, swim & sport events across Europe.',
   },
   {
+    phase: 'LIVE',
+    title: 'LIVE STREAM EVENT',
+    date: 'JUNE 2026',
+    icon: Radio,
+    desc: 'Real-time broadcasting of the swim attempt with commentary and live tracking.',
+  },
+  {
     phase: 'CLIMAX',
     title: 'THE CHANNEL CROSSING',
     date: 'JUNE 2026',
