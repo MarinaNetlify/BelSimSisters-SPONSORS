@@ -15,6 +15,7 @@ export function Navigation() {
   })
 
   const langButtons: { label: string; value: Language }[] = [
+    { label: 'ENG', value: 'en' },
     { label: 'RU', value: 'ru' },
     { label: 'BY', value: 'by' },
   ]
