@@ -1,0 +1,84 @@
+You are editing an existing single-page website (Belswimsisters / English Channel relay). Implement the following changes. Keep the current design style unless specified.
+
+1) Language buttons (no translation logic yet)
+- Add two small buttons “RU” and “BY” in the top navigation (top-right).
+- Buttons should be visible on all screen sizes.
+- No language switching behavior required yet (just UI).
+- Style: transparent background, white border, white text, subtle hover.
+
+2) Section: THE MISSION
+- In the hero/mission area where it says:
+  “SIX WOMEN. ONE MISSION. CROSS THE ENGLISH CHANNEL AS A RELAY TEAM.”
+  there is a strange background effect/image behind the text.
+- Remove that weird background effect for this section (remove background image/pattern/overlay or pseudo-element). Keep the section clean and readable.
+
+- Replace the mission copy with:
+
+Headline remains:
+“SIX WOMEN. ONE MISSION. CROSS THE ENGLISH CHANNEL AS A RELAY TEAM.”
+
+Replace body text with:
+“No wetsuits. No shortcuts. Just grit, cold water, and an unbreakable bond.
+We are Belswimsisters. We will be the first Belarusians to cross the English Channel.”
+
+(Keep line breaks nicely formatted on desktop and mobile.)
+
+3) Section: THE CHALLENGE
+- Wherever it currently says “1 TEAM”, change it to “6 GIRLS”.
+- Keep the same typography and layout.
+
+4) Section: THE TEAM
+- Update the team list to include exactly these names + locations:
+
+— Maryna Shynkarenka — London, United Kingdom
+— Ulyana Zarubina — Laguna Niguel, USA
+— Alena Hryhoryeva — Sarasota, USA
+— Darya Slizh — Vilnius, Lithuania
+— Anastasia Litvinenko — Vilnius, Lithuania
+— Maryia Kolesava-Hudzilina — Vilnius, Lithuania
+
+Add a subsection title:
+“Head of Support:”
+Then add:
+— Yury Yurchanka — Warsaw, Poland
+
+Match existing team list styling (cards or list). Keep spacing clean.
+
+5) Section: VISIBILITY PLAN
+- Keep the existing timeline layout/format, but replace the timeline text with a shorter plan based on the following (use English, concise):
+
+Title: “Where and how we’ll show up (by June 2026)”
+Timeline items (3–5 items max, grouped):
+
+Digital:
+• personal Instagram accounts
+• team Instagram
+• Telegram, LinkedIn, TikTok
+• live broadcast from the boat
+
+Media:
+• independent Belarusian media
+• international publications
+• sports media & blogs
+• reposts by well-known Belarusian public figures
+
+Community:
+• offline diaspora meetups
+• founder community talks
+• swim/sport events
+
+Final line (as the last timeline highlight):
+“Climax: the June 2026 Channel crossing and the final media peak.”
+
+6) Section: BE PART OF HISTORY
+- Change CONTACT email from “HELLO@BELSWIMSISTERS.COM” to:
+romanovich.m.a@gmail.com
+
+- Change CTA button text from “JOIN THE MISSION” to “WATCH US”
+- Update the CTA link to:
+https://www.instagram.com/belswimsisters/
+- Make sure it opens in a new tab (target=_blank) and keeps same button style.
+
+After changes:
+- Run and verify there are no broken layouts on mobile.
+- Keep all existing animations and styling unless required to remove the weird background in THE MISSION.

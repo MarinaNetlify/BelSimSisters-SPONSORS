@@ -27,7 +27,7 @@ export function Challenge() {
             displayOverride="~15-16°C" />
 
           <StatBlock number={0} suffix="" label="WETSUITS" delay={0.4} />
-          <StatBlock number={1} suffix="" label="TEAM" delay={0.6} />
+          <StatBlock number={6} suffix="" label="GIRLS" delay={0.6} />
         </div>
       </div>
     </section>);
