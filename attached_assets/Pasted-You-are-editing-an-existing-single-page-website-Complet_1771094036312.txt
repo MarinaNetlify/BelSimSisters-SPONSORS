@@ -1,0 +1,136 @@
+You are editing an existing single-page website.
+
+Completely update the “Why Partner With Us” section.
+
+IMPORTANT:
+- Keep the existing design, spacing, typography and layout style.
+- Only replace the content inside this section.
+- Do not change global styles.
+- Keep responsiveness intact.
+- Preserve the section title if it already exists.
+
+Replace the entire content of the “Why Partner With Us” block with the following structured content:
+
+--------------------------------------
+
+SECTION TITLE:
+Why Partner With Us
+
+--------------------------------------
+
+Subsection Title:
+4. Our Audience
+
+Content:
+
+Belswimsisters is not a niche sports project.
+
+It is a cross-border media story with cultural, professional and community reach.
+
+Our project connects with:
+
+• The international Belarusian diaspora (UK, EU, US)
+• IT & founders communities
+• Entrepreneurs and career-driven professionals
+• The endurance sports audience
+• Followers of well-known Belarusian artists, athletes and public figures
+• Women’s leadership communities
+
+We are intentionally building bridges between sport, business, culture and identity.
+
+This is not just about swimming.
+It’s about representation, resilience and visibility.
+
+--------------------------------------
+
+Subsection Title:
+5. Where & How We Show Up
+
+Intro line:
+By June 2026, the project will unfold across multiple touchpoints.
+
+Create three visual groups (keep same layout style as current timeline if possible):
+
+Digital:
+• Personal Instagram accounts of each team member
+• Official team Instagram
+• Telegram, LinkedIn, TikTok
+• Live broadcast from the escort boat during the Channel crossing
+
+Media:
+• Independent Belarusian media outlets
+• International publications
+• Sports media and endurance blogs
+• Amplification by well-known Belarusian public figures
+
+Community:
+• Offline diaspora meetups
+• Talks in founders and tech communities
+• Swim & endurance sport events
+
+Final highlighted line:
+Climax: The June 2026 English Channel crossing — a high-attention international media moment.
+
+--------------------------------------
+
+Subsection Title:
+6. What the Company Receives
+
+Intro paragraph:
+Partnering with Belswimsisters is not logo placement.
+It is strategic integration into a historic international project with strong values and narrative depth.
+
+Subsection:
+Brand Visibility
+
+• Swim caps during the Channel crossing
+• Swimsuits
+• Dryrobes and team merchandise
+• Training apparel
+• Towels and official materials
+
+Add sentence:
+The brand becomes part of the project’s visual identity throughout preparation and during the crossing itself.
+
+--------------------------------------
+
+Subsection:
+Digital & Content Integration
+
+• Team Instagram and personal athlete accounts
+• TikTok preparation content
+• LinkedIn (professional audience)
+• Telegram
+• Live broadcast from the escort boat
+• Photo & video materials
+• Final documentary-style content after the crossing
+
+Add sentence:
+This creates repeated, story-driven exposure — not one-off impressions.
+
+--------------------------------------
+
+Subsection:
+Reputational Value
+
+The partner is associated with:
+
+• The first Belarusian women’s attempt to cross the English Channel
+• Discipline and long-term preparation
+• International ambition
+• Initiative and leadership
+
+Final closing lines:
+
+This is not a campaign.
+It is a reputational asset.
+
+The project speaks directly to decision-makers, founders, ambitious professionals and globally mobile communities — an audience where resilience, strategy and courage are deeply valued.
+
+--------------------------------------
+
+After updating:
+- Ensure spacing between subsections is visually balanced.
+- Keep bullet styling consistent with the rest of the website.
+- Do not introduce layout shifts.
+- Verify mobile layout works correctly.
