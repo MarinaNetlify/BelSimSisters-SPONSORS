@@ -15,29 +15,11 @@ export function Partners() {
         </div>
 
         <Subsection number="4" title="OUR AUDIENCE" delay={0}>
-          <p className="text-xl md:text-2xl text-gray-300 font-body leading-relaxed mb-6">
-            Belswimsisters is not a niche sports project.
-          </p>
-          <p className="text-xl md:text-2xl text-gray-300 font-body leading-relaxed mb-10">
-            It is a cross-border media story with cultural, professional and community reach.
-          </p>
-          <p className="text-lg text-white font-bold font-body mb-6">
-            Our project connects with:
-          </p>
-          <ul className="space-y-3 text-gray-300 font-body text-lg mb-10">
-            <li className="flex items-start gap-3"><span className="text-electric mt-1">&#9679;</span>The international Belarusian diaspora (UK, EU, US)</li>
-            <li className="flex items-start gap-3"><span className="text-electric mt-1">&#9679;</span>IT & founders communities</li>
-            <li className="flex items-start gap-3"><span className="text-electric mt-1">&#9679;</span>Entrepreneurs and career-driven professionals</li>
-            <li className="flex items-start gap-3"><span className="text-electric mt-1">&#9679;</span>The endurance sports audience</li>
-            <li className="flex items-start gap-3"><span className="text-electric mt-1">&#9679;</span>Followers of well-known Belarusian artists, athletes and public figures</li>
-            <li className="flex items-start gap-3"><span className="text-electric mt-1">&#9679;</span>Women's leadership communities</li>
-          </ul>
-          <p className="text-gray-300 font-body text-lg leading-relaxed mb-4">
-            We are intentionally building bridges between sport, business, culture and identity.
+          <p className="text-xl text-gray-300 font-body leading-relaxed mb-8">
+            A cross-border media story reaching the Belarusian diaspora, IT & founders communities, entrepreneurs, endurance sports fans, and women's leadership networks.
           </p>
           <p className="text-white font-bold font-body text-lg leading-relaxed">
-            This is not just about swimming.<br />
-            It's about representation, resilience and visibility.
+            Not just about swimming — it's about representation, resilience and visibility.
           </p>
         </Subsection>
 
@@ -80,17 +62,6 @@ export function Partners() {
               index={2}
             />
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-electric/10 border border-electric/30 p-6 md:p-8"
-          >
-            <p className="text-xl md:text-2xl font-headline font-bold text-electric">
-              Climax: <span className="text-white">The June 2026 English Channel crossing — a high-attention international media moment.</span>
-            </p>
-          </motion.div>
         </Subsection>
 
         <Subsection number="6" title="WHAT THE COMPANY RECEIVES" delay={0.2}>
@@ -101,7 +72,7 @@ export function Partners() {
             It is strategic integration into a historic international project with strong values and narrative depth.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <BenefitBlock
               icon={Shirt}
               title="BRAND VISIBILITY"
@@ -117,7 +88,7 @@ export function Partners() {
             />
             <BenefitBlock
               icon={Share2}
-              title="DIGITAL & CONTENT INTEGRATION"
+              title="DIGITAL & CONTENT"
               items={[
                 'Team Instagram and personal athlete accounts',
                 'TikTok preparation content',
@@ -125,31 +96,24 @@ export function Partners() {
                 'Telegram',
                 'Live broadcast from the escort boat',
                 'Photo & video materials',
-                'Final documentary-style content after the crossing',
+                'Documentary-style content after the crossing',
               ]}
-              footnote="This creates repeated, story-driven exposure — not one-off impressions."
+              footnote="Repeated, story-driven exposure — not one-off impressions."
               index={1}
             />
+            <BenefitBlock
+              icon={Award}
+              title="REPUTATIONAL VALUE"
+              items={[
+                'The first Belarusian women\'s Channel crossing attempt',
+                'Discipline and long-term preparation',
+                'International ambition',
+                'Initiative and leadership',
+              ]}
+              footnote="The partner is associated with a historic achievement and strong values."
+              index={2}
+            />
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-zinc-900/50 border border-white/5 p-8 md:p-10 mb-12"
-          >
-            <div className="flex items-start gap-4 mb-6">
-              <Award className="w-10 h-10 text-electric flex-shrink-0 mt-1" />
-              <h4 className="text-2xl font-headline font-bold">REPUTATIONAL VALUE</h4>
-            </div>
-            <p className="text-gray-300 font-body text-lg mb-6">The partner is associated with:</p>
-            <ul className="space-y-3 text-gray-300 font-body text-lg mb-8">
-              <li className="flex items-start gap-3"><span className="text-electric mt-1">&#9679;</span>The first Belarusian women's attempt to cross the English Channel</li>
-              <li className="flex items-start gap-3"><span className="text-electric mt-1">&#9679;</span>Discipline and long-term preparation</li>
-              <li className="flex items-start gap-3"><span className="text-electric mt-1">&#9679;</span>International ambition</li>
-              <li className="flex items-start gap-3"><span className="text-electric mt-1">&#9679;</span>Initiative and leadership</li>
-            </ul>
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
