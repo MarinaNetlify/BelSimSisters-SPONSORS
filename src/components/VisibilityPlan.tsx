@@ -1,42 +1,42 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Instagram, Tv, Users, Radio } from 'lucide-react'
+import { Waves, Thermometer, Clock, MapPin, Target } from 'lucide-react'
 
 const TIMELINE = [
   {
-    phase: 'DIGITAL',
-    title: 'SOCIAL MEDIA & LIVE',
-    date: 'NOW — JUNE 2026',
-    icon: Instagram,
-    desc: 'Personal Instagram accounts, team Instagram, Telegram, LinkedIn, TikTok — plus a live broadcast from the boat during the crossing.',
+    phase: 'PREPARATION',
+    title: 'OPEN WATER TRAINING',
+    date: 'NOW — MAY 2026',
+    icon: Waves,
+    desc: 'Weekly cold water sessions, building endurance and acclimatizing to Channel conditions. Each swimmer must qualify with a 6-hour observed swim.',
   },
   {
-    phase: 'MEDIA',
-    title: 'PRESS & PUBLICATIONS',
-    date: 'ONGOING',
-    icon: Tv,
-    desc: 'Independent Belarusian media, international publications, sports media & blogs, reposts by well-known Belarusian public figures.',
+    phase: 'ACCLIMATIZATION',
+    title: 'COLD WATER ADAPTATION',
+    date: 'JAN — JUNE 2026',
+    icon: Thermometer,
+    desc: 'Progressive exposure to 15–16°C water temperatures without wetsuits. Building tolerance for the Channel crossing conditions.',
   },
   {
-    phase: 'COMMUNITY',
-    title: 'EVENTS & MEETUPS',
-    date: 'ONGOING',
-    icon: Users,
-    desc: 'Offline diaspora meetups, founder community talks, swim & sport events across Europe.',
+    phase: 'FINAL PREP',
+    title: 'TEAM REHEARSALS',
+    date: 'MAY — JUNE 2026',
+    icon: Clock,
+    desc: 'Relay changeover practice, boat-to-swimmer coordination, feeding strategy rehearsals, and night swimming sessions.',
   },
   {
-    phase: 'LIVE',
-    title: 'LIVE STREAM EVENT',
-    date: 'JUNE 2026',
-    icon: Radio,
-    desc: 'Real-time broadcasting of the swim attempt with commentary and live tracking.',
+    phase: 'TRAVEL',
+    title: 'ARRIVE IN DOVER',
+    date: 'MID-JUNE 2026',
+    icon: MapPin,
+    desc: 'Team assembles in Dover, England. Final briefings with the Channel Swimming Association pilot and support crew.',
   },
   {
-    phase: 'CLIMAX',
-    title: 'THE CHANNEL CROSSING',
-    date: 'JUNE 2026',
-    icon: Radio,
-    desc: 'The June 2026 Channel crossing and the final media peak.',
+    phase: 'SWIM WINDOW',
+    title: 'THE CROSSING',
+    date: 'JUNE 21 — JUNE 30, 2026',
+    icon: Target,
+    desc: 'Our assigned swim window. The team waits for optimal tide and weather conditions, then swims the English Channel as a relay — approximately 40–70 km depending on currents.',
   },
 ]
 
@@ -46,10 +46,10 @@ export function VisibilityPlan() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
           <h2 className="text-6xl md:text-8xl font-headline font-black tracking-tighter">
-            VISIBILITY PLAN
+            TRAINING PLAN
           </h2>
           <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto font-body">
-            Where and how we'll show up (by June 2026)
+            From preparation to the swim window: June 21 — June 30, 2026
           </p>
         </div>
 

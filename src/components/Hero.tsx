@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useCountdown } from '../hooks/useCountdown';
 export function Hero() {
-  const { days, hours, minutes, seconds } = useCountdown('2026-06-01T00:00:00');
+  const { days, hours, minutes, seconds } = useCountdown('2026-06-21T00:00:00');
   return (
     <section className="relative h-screen w-full overflow-hidden flex flex-col justify-center items-center bg-black">
       {/* Background Elements */}

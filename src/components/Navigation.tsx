@@ -29,16 +29,14 @@ export function Navigation() {
             BY
           </button>
 
-          <button
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:block px-6 py-2 bg-electric text-white font-headline font-bold tracking-wider hover:bg-white hover:text-black transition-colors duration-300 skew-x-[-10deg] ml-2"
-            onClick={() =>
-              document.getElementById('cta')?.scrollIntoView({
-                behavior: 'smooth',
-              })
-            }
           >
-            <span className="block skew-x-[10deg]">WATCH US</span>
-          </button>
+            <span className="block skew-x-[10deg]">DONATE</span>
+          </a>
         </div>
       </div>
     </motion.nav>
