@@ -18,16 +18,16 @@ src/
 ├── index.tsx                # Entry point
 ├── index.css                # Tailwind imports + custom utilities
 ├── components/
-│   ├── Navigation.tsx       # Fixed nav with scroll detection
-│   ├── Hero.tsx             # Hero with countdown timer
+│   ├── Navigation.tsx       # Fixed nav with DONATE button (Enthuse link TBD)
+│   ├── Hero.tsx             # Hero with countdown timer (June 21, 2026)
 │   ├── Mission.tsx          # Mission statement section
 │   ├── Challenge.tsx        # Stats about the swim challenge
 │   ├── Team.tsx             # Team member cards
-│   ├── Partners.tsx         # Sponsor benefits cards
-│   ├── VisibilityPlan.tsx   # Timeline of media strategy
+│   ├── Partners.tsx         # "Why Become Our Partner" — audience icons, channels, benefit blocks
+│   ├── VisibilityPlan.tsx   # Training Plan timeline (swim window June 21-30, 2026)
 │   └── CallToAction.tsx     # CTA section
 └── hooks/
-    └── useCountdown.ts      # Countdown timer hook (target: June 1, 2026)
+    └── useCountdown.ts      # Countdown timer hook (target: June 21, 2026)
 ```
 
 ## Design System
