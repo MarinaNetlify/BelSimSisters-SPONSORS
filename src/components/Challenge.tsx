@@ -5,10 +5,10 @@ import { useT } from '../i18n/LanguageContext';
 export function Challenge() {
   const { t } = useT();
   return (
-    <section className="py-32 bg-white text-black relative">
+    <section className="py-16 sm:py-24 md:py-32 bg-white text-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <h2 className="text-6xl md:text-8xl font-headline font-black tracking-tighter">
+          <h2 className="text-4xl sm:text-6xl md:text-8xl font-headline font-black tracking-tighter">
             {t('challenge.title')}
             <div className="h-2 w-32 bg-electric mt-4" />
           </h2>
@@ -67,10 +67,10 @@ function StatBlock({
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay }}
-      className="border-2 border-black p-8 relative hover:bg-black hover:text-white transition-colors duration-300 group"
+      className="border-2 border-black p-4 sm:p-6 md:p-8 relative hover:bg-black hover:text-white transition-colors duration-300 group"
     >
       <div className="absolute top-0 right-0 w-8 h-8 bg-electric opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      <div className="text-7xl md:text-8xl font-headline font-bold mb-2 group-hover:text-electric transition-colors duration-300">
+      <div className="text-5xl sm:text-7xl md:text-8xl font-headline font-bold mb-2 group-hover:text-electric transition-colors duration-300">
         {displayOverride || (
           <>
             {count}

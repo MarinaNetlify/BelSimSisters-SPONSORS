@@ -3,7 +3,7 @@ export type Language = 'en' | 'ru' | 'by';
 export const translations = {
   en: {
     nav: {
-      donate: 'DONATE',
+      donate: 'BECOME A SPONSOR',
     },
     hero: {
       line1: 'WE SWIM.',
@@ -17,7 +17,8 @@ export const translations = {
       label: 'THE MISSION',
       text1: 'SIX WOMEN. ONE MISSION.',
       text2: 'CROSS THE ENGLISH CHANNEL',
-      text3: 'AS THE FIRST BELARUSIANS.',
+      text3underline: 'THE FIRST',
+      text3rest: 'BELARUSIANS.',
     },
     challenge: {
       title: 'THE CHALLENGE',
@@ -34,9 +35,8 @@ export const translations = {
       title1: 'Why Become',
       title2: 'Our Partner',
       audienceTitle: 'OUR AUDIENCE',
-      audienceDesc: 'We work with more than just a sports audience.',
-      reach: 'Our project will reach:',
-      engage: 'We plan to engage:',
+      reach: '',
+      engage: '',
       audience: {
         diaspora: 'Belarusian diaspora (UK, EU, US)',
         it: 'IT & founders community',
@@ -51,7 +51,7 @@ export const translations = {
         musicians: 'Musicians & public figures',
         founders: 'Founders communities',
       },
-      channelsTitle: 'WHERE & HOW WE SHOW UP',
+      channelsTitle: 'OUR MARKETING',
       channelsDesc: 'By June 2026, the project will unfold across multiple touchpoints.',
       digital: 'DIGITAL',
       media: 'MEDIA',
@@ -74,11 +74,11 @@ export const translations = {
         'Swim & endurance sport events',
       ],
       receivesTitle: 'WHAT THE PARTNER RECEIVES',
-      brandVisibility: 'BRAND VISIBILITY',
+      brandVisibility: 'LOGO ON',
       digitalContent: 'DIGITAL & CONTENT',
       reputationalValue: 'REPUTATIONAL VALUE',
       brandVisibilityItems: [
-        'Swim caps during the Channel crossing',
+        'Swim caps during the crossing',
         'Swimsuits',
         'Dryrobes and team merchandise',
         'Training apparel',
@@ -86,10 +86,10 @@ export const translations = {
       ],
       brandVisibilityFootnote: "The brand becomes part of the project's visual identity throughout preparation and during the crossing itself.",
       digitalContentItems: [
-        'Team Instagram and personal athlete accounts',
-        'TikTok preparation content',
+        'Team Instagram/TikTok and personal athlete accounts',
         'LinkedIn (professional audience)',
-        'Telegram',
+        'Telegram communities',
+        'Wikipedia page',
         'Live broadcast from the escort boat',
         'Photo & video materials',
         'Documentary-style content after the crossing',
@@ -105,10 +105,16 @@ export const translations = {
       notCampaign: 'This is not a campaign.',
       reputationalAsset: 'reputational asset',
       itIsA: 'It is a',
-      sponsorshipTitle: 'SPONSORSHIP PACKAGE',
-      sponsorshipPrice: '$5,000',
-      sponsorshipDesc: 'Starting partnership package',
+      sponsorshipTitle: 'SPONSORSHIP TIERS',
+      tiers: [
+        { name: 'GOLD', price: 'TBD' },
+        { name: 'SILVER', price: 'TBD' },
+        { name: 'BRONZE', price: 'TBD' },
+      ],
+      tiersNote: 'Packages customized per brand integration',
       ctaButton: 'BECOME A SPONSOR',
+      overlayMessage: 'Please reach out to a BelSwimSister to agree on the sponsorship package',
+      emailButton: 'Email Us',
     },
     training: {
       title: 'TRAINING PLAN',
@@ -149,7 +155,7 @@ export const translations = {
     cta: {
       title: 'BE PART OF HISTORY',
       desc: 'Join us as a sponsor, partner, or supporter. Help us prove that impossible is just a word.',
-      button: 'WATCH US',
+      button: 'BECOME A SPONSOR',
       contact: 'CONTACT:',
     },
     footer: {
@@ -158,7 +164,7 @@ export const translations = {
   },
   ru: {
     nav: {
-      donate: 'ПОДДЕРЖАТЬ',
+      donate: 'СТАТЬ СПОНСОРОМ',
     },
     hero: {
       line1: 'МЫ ПЛЫВЁМ.',
@@ -172,7 +178,8 @@ export const translations = {
       label: 'МИССИЯ',
       text1: 'ШЕСТЬ ЖЕНЩИН. ОДНА МИССИЯ.',
       text2: 'ПЕРЕСЕЧЬ ЛА-МАНШ',
-      text3: 'ПЕРВЫМИ СРЕДИ БЕЛАРУСОВ.',
+      text3underline: 'ПЕРВЫМИ',
+      text3rest: 'СРЕДИ БЕЛАРУСОВ.',
     },
     challenge: {
       title: 'ВЫЗОВ',
@@ -189,9 +196,8 @@ export const translations = {
       title1: 'Почему стоит стать',
       title2: 'Нашим Партнёром',
       audienceTitle: 'НАША АУДИТОРИЯ',
-      audienceDesc: 'Мы работаем не только со спортивной аудиторией.',
-      reach: 'Наш проект охватит:',
-      engage: 'Мы планируем привлечь:',
+      reach: '',
+      engage: '',
       audience: {
         diaspora: 'Белорусская диаспора (UK, EU, US)',
         it: 'IT и стартап-сообщество',
@@ -206,7 +212,7 @@ export const translations = {
         musicians: 'Музыканты и публичные личности',
         founders: 'Сообщества основателей',
       },
-      channelsTitle: 'ГДЕ И КАК МЫ ПОЯВЛЯЕМСЯ',
+      channelsTitle: 'НАШ МАРКЕТИНГ',
       channelsDesc: 'К июню 2026 проект охватит множество точек контакта.',
       digital: 'ЦИФРОВЫЕ',
       media: 'МЕДИА',
@@ -229,7 +235,7 @@ export const translations = {
         'Плавательные и спортивные мероприятия',
       ],
       receivesTitle: 'ЧТО ПОЛУЧАЕТ ПАРТНЁР',
-      brandVisibility: 'ВИДИМОСТЬ БРЕНДА',
+      brandVisibility: 'ЛОГО НА',
       digitalContent: 'ЦИФРОВОЙ КОНТЕНТ',
       reputationalValue: 'РЕПУТАЦИОННАЯ ЦЕННОСТЬ',
       brandVisibilityItems: [
@@ -241,10 +247,10 @@ export const translations = {
       ],
       brandVisibilityFootnote: 'Бренд становится частью визуальной идентичности проекта на всём протяжении подготовки и самого заплыва.',
       digitalContentItems: [
-        'Командный Instagram и личные аккаунты спортсменок',
-        'Контент подготовки в TikTok',
+        'Командный Instagram/TikTok и личные аккаунты спортсменок',
         'LinkedIn (профессиональная аудитория)',
-        'Telegram',
+        'Telegram сообщества',
+        'Страница WIKIPEDIA',
         'Прямой эфир с катера сопровождения',
         'Фото и видео материалы',
         'Документальный контент после заплыва',
@@ -260,10 +266,16 @@ export const translations = {
       notCampaign: 'Это не рекламная кампания.',
       reputationalAsset: 'репутационный актив',
       itIsA: 'Это',
-      sponsorshipTitle: 'СПОНСОРСКИЙ ПАКЕТ',
-      sponsorshipPrice: '$5,000',
-      sponsorshipDesc: 'Стартовый партнёрский пакет',
+      sponsorshipTitle: 'СПОНСОРСКИЕ ПАКЕТЫ',
+      tiers: [
+        { name: 'GOLD', price: 'TBD' },
+        { name: 'SILVER', price: 'TBD' },
+        { name: 'BRONZE', price: 'TBD' },
+      ],
+      tiersNote: 'Пакеты формируются индивидуально под интеграцию бренда',
       ctaButton: 'СТАТЬ СПОНСОРОМ',
+      overlayMessage: 'Пожалуйста, свяжитесь с BelSwimSister для согласования спонсорского пакета',
+      emailButton: 'Написать нам',
     },
     training: {
       title: 'ПЛАН ПОДГОТОВКИ',
@@ -304,7 +316,7 @@ export const translations = {
     cta: {
       title: 'СТАНЬ ЧАСТЬЮ ИСТОРИИ',
       desc: 'Присоединяйтесь как спонсор, партнёр или поддерживающий. Помогите нам доказать, что невозможное — просто слово.',
-      button: 'СЛЕДИТЕ ЗА НАМИ',
+      button: 'СТАТЬ СПОНСОРОМ',
       contact: 'КОНТАКТ:',
     },
     footer: {
@@ -313,7 +325,7 @@ export const translations = {
   },
   by: {
     nav: {
-      donate: 'ПАДТРЫМАЦЬ',
+      donate: 'СТАЦЬ СПОНСАРАМ',
     },
     hero: {
       line1: 'МЫ ПЛЫВЁМ.',
@@ -327,7 +339,8 @@ export const translations = {
       label: 'МІСІЯ',
       text1: 'ШЭСЦЬ ЖАНЧЫН. АДНА МІСІЯ.',
       text2: 'ПЕРАСЕКЦІ ЛА-МАНШ',
-      text3: 'ПЕРШЫМІ СЯРОД БЕЛАРУСАЎ.',
+      text3underline: 'ПЕРШЫМІ',
+      text3rest: 'СЯРОД БЕЛАРУСАЎ.',
     },
     challenge: {
       title: 'ВЫКЛІК',
@@ -344,9 +357,8 @@ export const translations = {
       title1: 'Чаму варта стаць',
       title2: 'Нашым Партнёрам',
       audienceTitle: 'НАША АЎДЫТОРЫЯ',
-      audienceDesc: 'Мы працуем не толькі са спартыўнай аўдыторыяй.',
-      reach: 'Наш праект ахопіць:',
-      engage: 'Мы плануем прыцягнуць:',
+      reach: '',
+      engage: '',
       audience: {
         diaspora: 'Беларуская дыяспара (UK, EU, US)',
         it: 'IT і стартап-суполка',
@@ -361,7 +373,7 @@ export const translations = {
         musicians: 'Музыканты і публічныя асобы',
         founders: 'Суполкі заснавальнікаў',
       },
-      channelsTitle: "ДЗЕ І ЯК МЫ З'ЯЎЛЯЕМСЯ",
+      channelsTitle: 'НАШ МАРКЕТЫНГ',
       channelsDesc: 'Да чэрвеня 2026 праект ахопіць мноства кропак кантакту.',
       digital: 'ЛІЧБАВЫЯ',
       media: 'МЕДЫЯ',
@@ -384,7 +396,7 @@ export const translations = {
         'Плавальныя і спартыўныя мерапрыемствы',
       ],
       receivesTitle: 'ШТО АТРЫМЛІВАЕ ПАРТНЁР',
-      brandVisibility: 'БАЧНАСЦЬ БРЭНДА',
+      brandVisibility: 'ЛОГА НА',
       digitalContent: 'ЛІЧБАВЫ КАНТЭНТ',
       reputationalValue: 'РЭПУТАЦЫЙНАЯ КАШТОЎНАСЦЬ',
       brandVisibilityItems: [
@@ -396,10 +408,10 @@ export const translations = {
       ],
       brandVisibilityFootnote: 'Брэнд становіцца часткай візуальнай ідэнтычнасці праекта на ўсім працягу падрыхтоўкі і самога заплыву.',
       digitalContentItems: [
-        'Камандны Instagram і асабістыя акаўнты спартсменак',
-        'Кантэнт падрыхтоўкі ў TikTok',
+        'Камандны Instagram/TikTok і асабістыя акаўнты спартсменак',
         'LinkedIn (прафесійная аўдыторыя)',
-        'Telegram',
+        'Telegram суполкі',
+        'Старонка WIKIPEDIA',
         'Прамы эфір з катэра суправаджэння',
         'Фота і відэа матэрыялы',
         'Дакументальны кантэнт пасля заплыву',
@@ -415,10 +427,16 @@ export const translations = {
       notCampaign: 'Гэта не рэкламная кампанія.',
       reputationalAsset: 'рэпутацыйны актыў',
       itIsA: 'Гэта',
-      sponsorshipTitle: 'СПОНСАРСКІ ПАКЕТ',
-      sponsorshipPrice: '$5,000',
-      sponsorshipDesc: 'Стартавы партнёрскі пакет',
+      sponsorshipTitle: 'СПОНСАРСКІЯ ПАКЕТЫ',
+      tiers: [
+        { name: 'GOLD', price: 'TBD' },
+        { name: 'SILVER', price: 'TBD' },
+        { name: 'BRONZE', price: 'TBD' },
+      ],
+      tiersNote: 'Пакеты фарміруюцца індывідуальна пад інтэграцыю брэнда',
       ctaButton: 'СТАЦЬ СПОНСАРАМ',
+      overlayMessage: 'Калі ласка, звяжыцеся з BelSwimSister для ўзгаднення спонсарскага пакета',
+      emailButton: 'Напісаць нам',
     },
     training: {
       title: 'ПЛАН ПАДРЫХТОЎКІ',
@@ -459,7 +477,7 @@ export const translations = {
     cta: {
       title: 'СТАНЬ ЧАСТКАЙ ГІСТОРЫІ',
       desc: 'Далучайцеся як спонсар, партнёр або падтрымоўваючы. Дапамажыце нам даказаць, што немагчымае — проста слова.',
-      button: 'САЧЫЦЕ ЗА НАМІ',
+      button: 'СТАЦЬ СПОНСАРАМ',
       contact: 'КАНТАКТ:',
     },
     footer: {

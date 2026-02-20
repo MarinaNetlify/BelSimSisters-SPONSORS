@@ -20,7 +20,7 @@ export function Hero() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-2"
         >
-          <h1 className="text-[12vw] leading-[0.8] font-black tracking-tighter text-white mix-blend-difference">
+          <h1 className="text-[10vw] sm:text-[12vw] leading-[0.8] font-black tracking-tighter text-white mix-blend-difference">
             {t('hero.line1')}
           </h1>
         </motion.div>
@@ -31,7 +31,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           className="relative"
         >
-          <h1 className="text-[12vw] leading-[0.8] font-black tracking-tighter text-transparent text-stroke hover:text-electric transition-colors duration-500">
+          <h1 className="text-[10vw] sm:text-[12vw] leading-[0.8] font-black tracking-tighter text-transparent text-stroke hover:text-electric transition-colors duration-500">
             {t('hero.line2')}
           </h1>
 
@@ -47,7 +47,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-12 md:mt-24 grid grid-cols-4 gap-4 max-w-2xl"
+          className="mt-8 sm:mt-12 md:mt-24 grid grid-cols-4 gap-2 sm:gap-4 max-w-2xl"
         >
           <CountdownBlock value={days} label={t('hero.days')} />
           <CountdownBlock value={hours} label={t('hero.hrs')} />
