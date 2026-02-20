@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Globe, Briefcase, Trophy, Mic, Users, Heart, Share2, Award, Shirt, Instagram, Tv, DollarSign, X, Play } from 'lucide-react'
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Globe, Briefcase, Trophy, Mic, Users, Heart, Share2, Award, Shirt, Instagram, Tv, DollarSign } from 'lucide-react'
 import { useT } from '../i18n/LanguageContext'
+import { useSponsorOverlay } from './SponsorOverlayContext'
 
 export function Partners() {
   const { t, tArray } = useT()
-  const [showOverlay, setShowOverlay] = useState(false)
+  const { showOverlay } = useSponsorOverlay()
 
   const AUDIENCE_ITEMS = [
     { icon: Globe, label: t('partners.audience.diaspora') },
@@ -131,18 +132,7 @@ export function Partners() {
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {(tArray('partners.tiers') as unknown as { name: string; price: string }[]).map((tier, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="bg-zinc-900/50 border border-white/5 hover:border-electric/30 transition-all duration-300 p-5 sm:p-8 flex flex-col items-center text-center"
-                >
-                  <DollarSign className="w-10 h-10 text-electric mb-4" />
-                  <h5 className="text-xl font-headline font-bold text-white mb-3">{tier.name}</h5>
-                  <div className="text-4xl font-headline font-black text-electric">{tier.price}</div>
-                </motion.div>
+                <TierCard key={i} tier={tier} index={i} />
               ))}
             </div>
             <p className="text-gray-400 font-body text-sm italic mt-6 text-center">
@@ -170,7 +160,7 @@ export function Partners() {
             className="mt-12 flex justify-center"
           >
             <button
-              onClick={() => setShowOverlay(true)}
+              onClick={showOverlay}
               className="inline-block bg-electric text-white px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl md:text-2xl font-headline font-bold tracking-wider hover:bg-white hover:text-black transition-colors duration-300 skew-x-[-10deg] shadow-2xl cursor-pointer"
             >
               <span className="block skew-x-[10deg]">{t('partners.ctaButton')}</span>
@@ -178,79 +168,6 @@ export function Partners() {
           </motion.div>
         </Subsection>
       </div>
-
-      <AnimatePresence>
-        {showOverlay && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
-            onClick={() => setShowOverlay(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-lg bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 border border-electric/30 rounded-lg shadow-2xl shadow-electric/10 overflow-hidden"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric/10 via-transparent to-transparent pointer-events-none" />
-
-              <button
-                onClick={() => setShowOverlay(false)}
-                className="absolute top-4 right-4 z-10 text-gray-400 hover:text-white transition-colors"
-              >
-                <X className="w-6 h-6" />
-              </button>
-
-              <div className="relative p-6 sm:p-10 flex flex-col items-center text-center">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.2, type: 'spring', damping: 15 }}
-                  className="w-20 h-20 rounded-full bg-electric/20 border-2 border-electric flex items-center justify-center mb-8"
-                >
-                  <Play className="w-8 h-8 text-electric ml-1" />
-                </motion.div>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className="text-xl md:text-2xl font-headline font-bold text-white leading-relaxed mb-6"
-                >
-                  {t('partners.overlayMessage')}
-                </motion.p>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
-                  className="flex flex-col sm:flex-row gap-4"
-                >
-                  <a
-                    href="https://www.instagram.com/belswimsisters/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-electric text-white px-8 py-3 font-headline font-bold tracking-wider hover:bg-white hover:text-black transition-colors duration-300"
-                  >
-                    <Instagram className="w-5 h-5" />
-                    Instagram
-                  </a>
-                  <a
-                    href="mailto:romanovich.m.a@gmail.com"
-                    className="inline-flex items-center gap-2 border border-electric text-electric px-8 py-3 font-headline font-bold tracking-wider hover:bg-electric hover:text-white transition-colors duration-300"
-                  >
-                    {t('partners.emailButton')}
-                  </a>
-                </motion.div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   )
 }
@@ -354,4 +271,49 @@ function BenefitBlock({
       </p>
     </motion.div>
   )
+}
+
+const TIER_COLORS = [
+  { border: '#FFD700', shadow: 'rgba(255, 215, 0, 0.35)', text: '#FFD700' },
+  { border: '#C0C0C0', shadow: 'rgba(192, 192, 192, 0.35)', text: '#C0C0C0' },
+  { border: '#CD7F32', shadow: 'rgba(205, 127, 50, 0.35)', text: '#CD7F32' },
+];
+
+function TierCard({ tier, index }: { tier: { name: string; price: string }; index: number }) {
+  const [hovered, setHovered] = React.useState(false);
+  const colors = TIER_COLORS[index];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
+      className="bg-zinc-900/50 border p-5 sm:p-8 flex flex-col items-center text-center cursor-pointer"
+      style={{
+        borderColor: hovered ? colors.border : 'rgba(255,255,255,0.05)',
+        boxShadow: hovered ? `0 0 20px ${colors.shadow}, 0 0 40px ${colors.shadow}` : 'none',
+        transition: 'border-color 0.3s, box-shadow 0.3s',
+      }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <DollarSign
+        className="w-10 h-10 mb-4 transition-colors duration-300"
+        style={{ color: hovered ? colors.text : '#0066FF' }}
+      />
+      <h5
+        className="text-xl font-headline font-bold mb-3 transition-colors duration-300"
+        style={{ color: hovered ? colors.text : '#FFFFFF' }}
+      >
+        {tier.name}
+      </h5>
+      <div
+        className="text-4xl font-headline font-black transition-colors duration-300"
+        style={{ color: hovered ? colors.text : '#0066FF' }}
+      >
+        {tier.price}
+      </div>
+    </motion.div>
+  );
 }

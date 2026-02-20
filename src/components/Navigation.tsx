@@ -1,14 +1,17 @@
 import React from 'react'
 import { useState } from 'react'
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
+import { Instagram } from 'lucide-react'
 import { useLanguage, useT } from '../i18n/LanguageContext'
 import { Language } from '../i18n/translations'
+import { useSponsorOverlay } from './SponsorOverlayContext'
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const { scrollY } = useScroll()
   const { language, setLanguage } = useLanguage()
   const { t } = useT()
+  const { showOverlay } = useSponsorOverlay()
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     setIsScrolled(latest > 50)
@@ -56,10 +59,18 @@ export function Navigation() {
             href="https://www.instagram.com/belswimsisters/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:block px-6 py-2 bg-electric text-white font-headline font-bold tracking-wider hover:bg-white hover:text-black transition-colors duration-300 skew-x-[-10deg] ml-2"
+            className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 text-white hover:text-electric transition-colors duration-300 ml-1"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
+          </a>
+
+          <button
+            onClick={showOverlay}
+            className="hidden md:block px-6 py-2 bg-electric text-white font-headline font-bold tracking-wider hover:bg-white hover:text-black transition-colors duration-300 skew-x-[-10deg] ml-2 cursor-pointer"
           >
             <span className="block skew-x-[10deg]">{t('nav.donate')}</span>
-          </a>
+          </button>
         </div>
       </div>
     </motion.nav>

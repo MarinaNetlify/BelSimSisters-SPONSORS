@@ -1,5 +1,6 @@
 import React from 'react';
 import { LanguageProvider } from './i18n/LanguageContext';
+import { SponsorOverlayProvider } from './components/SponsorOverlayContext';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { Mission } from './components/Mission';
@@ -32,7 +33,9 @@ function AppContent() {
 export function App() {
   return (
     <LanguageProvider>
-      <AppContent />
+      <SponsorOverlayProvider>
+        <AppContent />
+      </SponsorOverlayProvider>
     </LanguageProvider>
   );
 }
