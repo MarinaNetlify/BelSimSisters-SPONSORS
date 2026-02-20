@@ -1,9 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useT } from '../i18n/LanguageContext'
+import { useSponsorOverlay } from './SponsorOverlayContext'
 
 export function CallToAction() {
   const { t } = useT()
+  const { showOverlay } = useSponsorOverlay()
+
   return (
     <section
       id="cta"
@@ -37,16 +40,14 @@ export function CallToAction() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <motion.a
-            href="https://www.instagram.com/belswimsisters/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.button
+            onClick={showOverlay}
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="inline-block bg-black text-white px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-2xl font-headline font-bold tracking-wider hover:bg-white hover:text-black transition-colors duration-300 skew-x-[-10deg] shadow-2xl"
+            className="inline-block bg-black text-white px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-2xl font-headline font-bold tracking-wider hover:bg-white hover:text-black transition-colors duration-300 skew-x-[-10deg] shadow-2xl cursor-pointer"
           >
             <span className="block skew-x-[10deg]">{t('cta.button')}</span>
-          </motion.a>
+          </motion.button>
         </motion.div>
 
       </div>

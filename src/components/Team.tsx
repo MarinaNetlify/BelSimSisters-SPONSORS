@@ -1,22 +1,24 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { useT } from '../i18n/LanguageContext'
+import { useT, useLanguage } from '../i18n/LanguageContext'
+import { Language } from '../i18n/translations'
 
 const TEAM_MEMBERS = [
-  { name: 'ULYANA ZARUBINA', role: 'LAGUNA NIGUEL, USA', image: '/images/ulyana.jpg' },
-  { name: 'ALENA HRYHORYEVA', role: 'SARASOTA, USA', image: '/images/alena.jpg' },
-  { name: 'DARYA SLIZH', role: 'VILNIUS, LITHUANIA', image: '/images/darya.jpg' },
-  { name: 'MARYNA SHYNKARENKA', role: 'LONDON, UNITED KINGDOM', image: '/images/marina.jpg' },
-  { name: 'MARYIA KOLESAVA-HUDZILINA', role: 'VILNIUS, LITHUANIA', image: '/images/masha.jpg' },
-  { name: 'ANASTASIA LITVINENKO', role: 'VILNIUS, LITHUANIA', image: '/images/nastia.jpg' },
+  { name: { en: 'ULYANA ZARUBINA', ru: 'УЛЬЯНА ЗАРУБИНА', by: 'УЛЬЯНА ЗАРУБІНА' }, role: 'LAGUNA NIGUEL, USA', image: '/images/ulyana.jpg' },
+  { name: { en: 'ALENA HRYHORYEVA', ru: 'АЛЁНА ГРИГОРЬЕВА', by: "АЛЁНА ГРЫГОР'ЕВА" }, role: 'SARASOTA, USA', image: '/images/alena.jpg' },
+  { name: { en: 'DARYA SLIZH', ru: 'ДАРЬЯ СЛИЖ', by: "ДАР'Я СЛІЖ" }, role: 'VILNIUS, LITHUANIA', image: '/images/darya.jpg' },
+  { name: { en: 'MARYNA SHYNKARENKA', ru: 'МАРИНА ШИНКАРЕНКО', by: 'МАРЫНА ШЫНКАРЭНКА' }, role: 'LONDON, UNITED KINGDOM', image: '/images/marina.jpg' },
+  { name: { en: 'MARYIA KOLESAVA-HUDZILINA', ru: 'МАРИЯ КОЛЕСАВА-ХУДИЛИНА', by: 'МАРЫЯ КОЛЕСАВА-ХУДЗІЛІНА' }, role: 'VILNIUS, LITHUANIA', image: '/images/masha.jpg' },
+  { name: { en: 'ANASTASIA LITVINENKO', ru: 'АНАСТАСИЯ ЛИТВИНЕНКО', by: 'АНАСТАСІЯ ЛІТВІНЕНКА' }, role: 'VILNIUS, LITHUANIA', image: '/images/nastia.jpg' },
 ]
 
 const SUPPORT = [
-  { name: 'YURY YURCHANKA', role: 'WARSAW, POLAND', image: '/images/yura.jpg' },
+  { name: { en: 'YURY YURCHANKA', ru: 'ЮРИЙ ЮРЧАНКА', by: 'ЮРЫЙ ЮРЧАНКА' }, role: 'WARSAW, POLAND', image: '/images/yura.jpg' },
 ]
 
 export function Team() {
   const { t } = useT()
+  const { language } = useLanguage()
   return (
     <section className="py-16 sm:py-20 md:py-24 bg-black text-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,7 +33,7 @@ export function Team() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {TEAM_MEMBERS.map((member, index) => (
-            <TeamCard key={index} member={member} index={index} />
+            <TeamCard key={index} member={member} index={index} language={language} />
           ))}
         </div>
 
@@ -46,7 +48,7 @@ export function Team() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {SUPPORT.map((member, index) => (
-            <TeamCard key={index} member={member} index={index} />
+            <TeamCard key={index} member={member} index={index} language={language} />
           ))}
         </div>
       </div>
@@ -57,10 +59,13 @@ export function Team() {
 function TeamCard({
   member,
   index,
+  language,
 }: {
-  member: { name: string; role: string; image: string }
+  member: { name: Record<Language, string>; role: string; image: string }
   index: number
+  language: Language
 }) {
+  const displayName = member.name[language]
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -71,14 +76,14 @@ function TeamCard({
     >
       <img
         src={member.image}
-        alt={member.name}
+        alt={displayName}
         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
       />
 
       <div className="absolute inset-0 flex flex-col justify-end p-2 sm:p-4 bg-gradient-to-t from-black via-black/50 to-transparent">
         <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
           <h3 className="text-xs sm:text-base font-headline font-bold text-white mb-1 group-hover:text-electric transition-colors leading-tight">
-            {member.name}
+            {displayName}
           </h3>
           <p className="text-[10px] sm:text-xs font-body tracking-widest text-gray-400 border-l-2 border-electric pl-2">
             {member.role}

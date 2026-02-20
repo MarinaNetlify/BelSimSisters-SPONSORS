@@ -18,7 +18,7 @@ export function Hero() {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="mb-2"
+          className="mb-6 sm:mb-8"
         >
           <h1 className="text-[10vw] sm:text-[12vw] leading-[0.8] font-black tracking-tighter text-white mix-blend-difference">
             {t('hero.line1')}
