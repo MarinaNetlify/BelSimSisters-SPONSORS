@@ -20,7 +20,7 @@ export function Mission() {
     },
   }
   return (
-    <section className="relative py-32 bg-zinc-900 clip-diagonal overflow-hidden">
+    <section className="relative py-16 sm:py-24 md:py-32 bg-zinc-900 clip-diagonal overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           variants={containerVariants}
@@ -38,11 +38,12 @@ export function Mission() {
 
           <motion.p
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-headline font-bold leading-tight"
+            className="text-2xl sm:text-4xl md:text-6xl font-headline font-bold leading-tight"
           >
             {t('mission.text1')}{' '}
             <span className="text-electric">{t('mission.text2')}</span>{' '}
-            {t('mission.text3')}
+            <span className="underline decoration-electric decoration-4 underline-offset-8">{t('mission.text3underline')}</span>{' '}
+            {t('mission.text3rest')}
           </motion.p>
         </motion.div>
       </div>

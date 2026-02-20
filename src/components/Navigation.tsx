@@ -22,7 +22,7 @@ export function Navigation() {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-colors duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}`}
+      className={`fixed top-0 left-0 right-0 z-50 px-3 sm:px-6 py-3 sm:py-4 transition-colors duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -30,19 +30,19 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <span
-            className="font-headline font-bold text-2xl tracking-tighter text-white cursor-pointer"
+            className="font-headline font-bold text-lg sm:text-2xl tracking-tighter text-white cursor-pointer"
             onClick={() => setLanguage('en')}
           >
             BELSWIM<span className="text-electric">SISTERS</span>
           </span>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3">
           {langButtons.map((btn) => (
             <button
               key={btn.value}
               onClick={() => setLanguage(btn.value)}
-              className={`px-3 py-1 border text-xs font-headline font-bold tracking-wider transition-colors duration-300 rounded ${
+              className={`px-2 sm:px-3 py-1 border text-[10px] sm:text-xs font-headline font-bold tracking-wider transition-colors duration-300 rounded ${
                 language === btn.value
                   ? 'border-electric text-electric bg-electric/10'
                   : 'border-white/40 text-white hover:bg-white/10'
@@ -53,7 +53,7 @@ export function Navigation() {
           ))}
 
           <a
-            href="#"
+            href="https://www.instagram.com/belswimsisters/"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:block px-6 py-2 bg-electric text-white font-headline font-bold tracking-wider hover:bg-white hover:text-black transition-colors duration-300 skew-x-[-10deg] ml-2"

@@ -42,13 +42,13 @@ export function VisibilityPlan() {
   ]
 
   return (
-    <section className="py-32 bg-white text-black relative clip-diagonal-reverse">
+    <section className="pt-48 sm:pt-56 pb-16 sm:pb-24 md:pb-32 bg-white text-black relative clip-diagonal-reverse z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-24">
-          <h2 className="text-6xl md:text-8xl font-headline font-black tracking-tighter">
+        <div className="text-center mb-12 sm:mb-16 md:mb-24">
+          <h2 className="text-4xl sm:text-6xl md:text-8xl font-headline font-black tracking-tighter text-electric">
             {t('training.title')}
           </h2>
-          <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto font-body">
+          <p className="mt-4 sm:mt-6 text-base sm:text-xl text-gray-600 max-w-2xl mx-auto font-body">
             {t('training.subtitle')}
           </p>
         </div>
@@ -77,17 +77,17 @@ function TimelineItem({ item, index }: { item: any; index: number; icon?: any })
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className={`relative flex flex-col md:flex-row ${isEven ? 'md:flex-row-reverse' : ''} items-start md:items-center`}
     >
-      <div className="w-full md:w-1/2 pl-12 md:pl-0 md:px-12 mb-4 md:mb-0">
+      <div className={`w-full md:w-1/2 pl-12 mb-4 md:mb-0 ${isEven ? 'md:pl-28 md:pr-6' : 'md:pl-6 md:pr-28'}`}>
         <div
           className={`flex flex-col ${isEven ? 'md:items-start' : 'md:items-end'} text-left ${isEven ? 'md:text-left' : 'md:text-right'}`}
         >
-          <span className="text-electric font-bold tracking-widest text-sm mb-2">
+          <span className="text-electric font-bold tracking-widest text-xs sm:text-sm mb-2">
             {item.phase} // {item.date}
           </span>
-          <h3 className="text-3xl md:text-4xl font-headline font-bold mb-4">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold mb-4">
             {item.title}
           </h3>
-          <p className="text-gray-600 font-body leading-relaxed max-w-md">
+          <p className="text-gray-600 font-body leading-relaxed max-w-md text-sm sm:text-base">
             {item.desc}
           </p>
         </div>
