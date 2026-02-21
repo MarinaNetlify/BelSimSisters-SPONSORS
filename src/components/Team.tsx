@@ -8,7 +8,7 @@ const TEAM_MEMBERS = [
   { name: { en: 'ALENA HRYHORYEVA', ru: 'АЛЁНА ГРИГОРЬЕВА', by: "АЛЁНА ГРЫГОР'ЕВА" }, role: 'SARASOTA, USA', image: '/images/alena.jpg' },
   { name: { en: 'DARYA SLIZH', ru: 'ДАРЬЯ СЛИЖ', by: "ДАР'Я СЛІЖ" }, role: 'VILNIUS, LITHUANIA', image: '/images/darya.jpg' },
   { name: { en: 'MARYNA SHYNKARENKA', ru: 'МАРИНА ШИНКАРЕНКО', by: 'МАРЫНА ШЫНКАРЭНКА' }, role: 'LONDON, UNITED KINGDOM', image: '/images/marina.jpg' },
-  { name: { en: 'MARYIA KOLESAVA-HUDZILINA', ru: 'МАРИЯ КОЛЕСАВА-ХУДИЛИНА', by: 'МАРЫЯ КОЛЕСАВА-ХУДЗІЛІНА' }, role: 'VILNIUS, LITHUANIA', image: '/images/masha.jpg' },
+  { name: { en: 'MARYIA KOLESAVA-HUDZILINA', ru: 'МАРИЯ КОЛЕСАВА-ГУДИЛИНА', by: 'МАРЫЯ КОЛЕСАВА-ГУДЗІЛІНА' }, role: 'VILNIUS, LITHUANIA', image: '/images/masha.jpg' },
   { name: { en: 'ANASTASIA LITVINENKO', ru: 'АНАСТАСИЯ ЛИТВИНЕНКО', by: 'АНАСТАСІЯ ЛІТВІНЕНКА' }, role: 'VILNIUS, LITHUANIA', image: '/images/nastia.jpg' },
 ]
 
