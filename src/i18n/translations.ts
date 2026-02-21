@@ -107,9 +107,9 @@ export const translations = {
       itIsA: 'It is a',
       sponsorshipTitle: 'SPONSORSHIP TIERS',
       tiers: [
-        { name: 'GOLD', price: 'TBD' },
-        { name: 'SILVER', price: 'TBD' },
-        { name: 'BRONZE', price: 'TBD' },
+        { name: 'BRONZE', price: 'TBD', description: 'Basic brand presence in the project ecosystem (logo placement on the website, brand association with the project, etc.)' },
+        { name: 'SILVER', price: 'TBD', description: 'Regular brand presence in communications and sports events (brand visibility among the project audience, tags in posts, mentions in reports and results, etc.)' },
+        { name: 'GOLD', price: 'TBD', description: 'Strategic partnership and maximum brand integration into the project (logo: website + social media + gear, regular mentions, dedicated publications, media, etc.)' },
       ],
       tiersNote: 'Packages customized per brand integration',
       ctaButton: 'BECOME A SPONSOR',
@@ -117,7 +117,7 @@ export const translations = {
       emailButton: 'Email Us',
     },
     training: {
-      title: 'TRAINING PLAN',
+      title: 'EVENT PLAN',
       subtitle: 'From preparation to the swim window: June 21 — June 30, 2026',
       phases: [
         {
@@ -268,9 +268,9 @@ export const translations = {
       itIsA: 'Это',
       sponsorshipTitle: 'СПОНСОРСКИЕ ПАКЕТЫ',
       tiers: [
-        { name: 'GOLD', price: 'TBD' },
-        { name: 'SILVER', price: 'TBD' },
-        { name: 'BRONZE', price: 'TBD' },
+        { name: 'BRONZE', price: 'TBD', description: 'Базовое присутствие бренда в экосистеме проекта (размещение логотипа на сайте, ассоциация бренда с проектом и тд)' },
+        { name: 'SILVER', price: 'TBD', description: 'Регулярное присутствие бренда в коммуникациях и спортивных событиях (бренд-visibility среди аудитории проекта, отметки в постах, упоминания в отчётах и итогах и тд)' },
+        { name: 'GOLD', price: 'TBD', description: 'Стратегическое партнёрство и максимальная интеграция бренда в проект (логотип: сайт + соцсети + экипировка, регулярные упоминания, отдельные публикации, СМИ и тд)' },
       ],
       tiersNote: 'Пакеты формируются индивидуально под интеграцию бренда',
       ctaButton: 'СТАТЬ СПОНСОРОМ',
@@ -278,7 +278,7 @@ export const translations = {
       emailButton: 'Написать нам',
     },
     training: {
-      title: 'ПЛАН ПОДГОТОВКИ',
+      title: 'ПЛАН СОБЫТИЯ',
       subtitle: 'От подготовки до окна заплыва: 21 — 30 июня 2026',
       phases: [
         {
@@ -429,9 +429,9 @@ export const translations = {
       itIsA: 'Гэта',
       sponsorshipTitle: 'СПОНСАРСКІЯ ПАКЕТЫ',
       tiers: [
-        { name: 'GOLD', price: 'TBD' },
-        { name: 'SILVER', price: 'TBD' },
-        { name: 'BRONZE', price: 'TBD' },
+        { name: 'BRONZE', price: 'TBD', description: 'Базавая прысутнасць брэнда ў экасістэме праекта (размяшчэнне лагатыпа на сайце, асацыяцыя брэнда з праектам і г.д.)' },
+        { name: 'SILVER', price: 'TBD', description: 'Рэгулярная прысутнасць брэнда ў камунікацыях і спартыўных падзеях (brand-visibility сярод аўдыторыі праекта, адзнакі ў пастах, упамінанні ў справаздачах і выніках і г.д.)' },
+        { name: 'GOLD', price: 'TBD', description: 'Стратэгічнае партнёрства і максімальная інтэграцыя брэнда ў праект (лагатып: сайт + сацсеткі + экіпіроўка, рэгулярныя ўпамінанні, асобныя публікацыі, СМІ і г.д.)' },
       ],
       tiersNote: 'Пакеты фарміруюцца індывідуальна пад інтэграцыю брэнда',
       ctaButton: 'СТАЦЬ СПОНСАРАМ',
@@ -439,7 +439,7 @@ export const translations = {
       emailButton: 'Напісаць нам',
     },
     training: {
-      title: 'ПЛАН ПАДРЫХТОЎКІ',
+      title: 'ПЛАН ПАДЗЕЙ',
       subtitle: 'Ад падрыхтоўкі да акна заплыву: 21 — 30 чэрвеня 2026',
       phases: [
         {

@@ -131,7 +131,7 @@ export function Partners() {
               {t('partners.sponsorshipTitle')}
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {(tArray('partners.tiers') as unknown as { name: string; price: string }[]).map((tier, i) => (
+              {(tArray('partners.tiers') as unknown as { name: string; price: string; description: string }[]).map((tier, i) => (
                 <TierCard key={i} tier={tier} index={i} />
               ))}
             </div>
@@ -274,12 +274,12 @@ function BenefitBlock({
 }
 
 const TIER_COLORS = [
-  { border: '#FFD700', shadow: 'rgba(255, 215, 0, 0.35)', text: '#FFD700' },
-  { border: '#C0C0C0', shadow: 'rgba(192, 192, 192, 0.35)', text: '#C0C0C0' },
   { border: '#CD7F32', shadow: 'rgba(205, 127, 50, 0.35)', text: '#CD7F32' },
+  { border: '#C0C0C0', shadow: 'rgba(192, 192, 192, 0.35)', text: '#C0C0C0' },
+  { border: '#FFD700', shadow: 'rgba(255, 215, 0, 0.35)', text: '#FFD700' },
 ];
 
-function TierCard({ tier, index }: { tier: { name: string; price: string }; index: number }) {
+function TierCard({ tier, index }: { tier: { name: string; price: string; description: string }; index: number }) {
   const [hovered, setHovered] = React.useState(false);
   const colors = TIER_COLORS[index];
 
@@ -308,6 +308,9 @@ function TierCard({ tier, index }: { tier: { name: string; price: string }; inde
       >
         {tier.name}
       </h5>
+      <p className="text-sm text-gray-400 font-body leading-relaxed mb-4">
+        {tier.description}
+      </p>
       <div
         className="text-4xl font-headline font-black transition-colors duration-300"
         style={{ color: hovered ? colors.text : '#0066FF' }}
