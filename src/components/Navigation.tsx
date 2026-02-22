@@ -34,7 +34,7 @@ export function Navigation() {
         <div className="flex items-center">
           <span
             className="font-headline font-bold text-lg sm:text-2xl tracking-tighter text-white cursor-pointer"
-            onClick={() => setLanguage('en')}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             BELSWIM<span className="text-electric">SISTERS</span>
           </span>

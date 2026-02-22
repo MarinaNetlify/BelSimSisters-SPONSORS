@@ -114,6 +114,23 @@ export function Partners() {
 
         {/* Sponsorship Tiers */}
         <Subsection title={t('partners.sponsorshipTitle')} delay={0.25}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-10"
+          >
+            <div className="border-l-4 border-electric pl-4 sm:pl-6">
+              <p className="text-lg sm:text-xl md:text-2xl font-headline font-bold text-electric">
+                {t('hero.fundraisingGoal')}
+              </p>
+              <p className="text-sm sm:text-base text-gray-300 font-body mt-2 leading-relaxed">
+                {t('hero.fundraisingDesc')}
+              </p>
+            </div>
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {(tArray('partners.tiers') as unknown as { name: string; price: string; description: string }[]).map((tier, i) => (
               <TierCard key={i} tier={tier} index={i} />
