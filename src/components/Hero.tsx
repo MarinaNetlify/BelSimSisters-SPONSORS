@@ -13,11 +13,11 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-900 via-black to-black opacity-50" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-electric/5 skew-x-12 transform origin-top-right" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center h-full">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center h-full pt-20 sm:pt-24">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 1.6, ease: 'easeOut' }}
           className="mb-6 sm:mb-8"
         >
           <h1 className="text-[10vw] sm:text-[12vw] leading-[0.8] font-black tracking-tighter text-white mix-blend-difference">
@@ -28,7 +28,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+          transition={{ duration: 1.6, delay: 0.4, ease: 'easeOut' }}
           className="relative"
         >
           <h1 className="text-[10vw] sm:text-[12vw] leading-[0.8] font-black tracking-tighter text-transparent text-stroke hover:text-electric transition-colors duration-500">
@@ -38,7 +38,7 @@ export function Hero() {
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 1.2, delay: 1.0 }}
             className="relative mt-2 w-full h-2 md:h-4 bg-electric -skew-y-2 origin-left"
           />
         </motion.div>
@@ -46,7 +46,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 1.0, delay: 1.4 }}
           className="mt-8 sm:mt-12 md:mt-24 grid grid-cols-4 gap-2 sm:gap-4 max-w-2xl"
         >
           <CountdownBlock value={days} label={t('hero.days')} />
@@ -54,6 +54,7 @@ export function Hero() {
           <CountdownBlock value={minutes} label={t('hero.mins')} />
           <CountdownBlock value={seconds} label={t('hero.secs')} />
         </motion.div>
+
       </div>
 
       <motion.div

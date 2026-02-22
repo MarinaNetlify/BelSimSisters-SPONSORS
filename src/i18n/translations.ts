@@ -8,6 +8,8 @@ export const translations = {
     hero: {
       line1: 'WE SWIM.',
       line2: 'WE MAKE HISTORY.',
+      fundraisingGoal: 'Fundraising goal: ~£40,000',
+      fundraisingDesc: 'We are raising funds to cover the core costs of a certified English Channel relay: registration, escort boat, safety, and logistics.',
       days: 'DAYS',
       hrs: 'HRS',
       mins: 'MINS',
@@ -159,6 +161,8 @@ export const translations = {
     hero: {
       line1: 'МЫ ПЛЫВЁМ.',
       line2: 'МЫ СОЗДАЁМ ИСТОРИЮ.',
+      fundraisingGoal: 'Цель сбора: ~£40,000',
+      fundraisingDesc: 'Мы собираем средства на основные расходы сертифицированной эстафеты через Ла-Манш: регистрацию, сопровождающее судно, безопасность и логистику.',
       days: 'ДНЕЙ',
       hrs: 'ЧАСОВ',
       mins: 'МИНУТ',
@@ -310,6 +314,8 @@ export const translations = {
     hero: {
       line1: 'МЫ ПЛЫВЕМ.',
       line2: 'МЫ СТВАРАЕМ ГІСТОРЫЮ.',
+      fundraisingGoal: 'Мэта збору: ~£40,000',
+      fundraisingDesc: 'Мы збіраем сродкі на асноўныя выдаткі сертыфікаванай эстафеты праз Ла-Манш: рэгістрацыю, суправаджальнае судна, бяспеку і лагістыку.',
       days: 'ДЗЁН',
       hrs: 'ГАДЗІН',
       mins: 'ХВІЛІН',

@@ -1,6 +1,17 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import { Language, translations } from './translations';
 
+const LANG_PATHS: Record<string, Language> = {
+  '/en': 'en',
+  '/ru': 'ru',
+  '/by': 'by',
+};
+
+function getLanguageFromPath(): Language {
+  const path = window.location.pathname.toLowerCase().replace(/\/+$/, '');
+  return LANG_PATHS[path] || 'by';
+}
+
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
@@ -12,7 +23,13 @@ const LanguageContext = createContext<LanguageContextType>({
 });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>('by');
+  const [language, setLanguageState] = useState<Language>(getLanguageFromPath);
+
+  const setLanguage = useCallback((lang: Language) => {
+    setLanguageState(lang);
+    const newPath = `/${lang}`;
+    window.history.pushState(null, '', newPath);
+  }, []);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
