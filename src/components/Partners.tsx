@@ -31,18 +31,7 @@ export function Partners() {
           title={t('partners.block1Title')}
           description={t('partners.block1Desc')}
           delay={0}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <TagList
-              label={t('partners.block1CommunityLabel')}
-              items={tArray('partners.block1CommunityItems')}
-            />
-            <TagList
-              label={t('partners.block1PartnerLabel')}
-              items={tArray('partners.block1PartnerItems')}
-            />
-          </div>
-        </WhyBlock>
+        />
 
         {/* Block 2: Reputational asset */}
         <WhyBlock
@@ -51,18 +40,7 @@ export function Partners() {
           title={t('partners.block2Title')}
           description={t('partners.block2Desc')}
           delay={0.05}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <TagList
-              label={t('partners.block2LeftLabel')}
-              items={tArray('partners.block2LeftItems')}
-            />
-            <TagList
-              label={t('partners.block2RightLabel')}
-              items={tArray('partners.block2RightItems')}
-            />
-          </div>
-        </WhyBlock>
+        />
 
         {/* Block 3: Brand enhancement */}
         <WhyBlock
@@ -71,12 +49,7 @@ export function Partners() {
           title={t('partners.block3Title')}
           description={t('partners.block3Desc')}
           delay={0.1}
-        >
-          <TagList
-            label={t('partners.block3Label')}
-            items={tArray('partners.block3Items')}
-          />
-        </WhyBlock>
+        />
 
         {/* Block 4: Value position */}
         <WhyBlock
@@ -85,12 +58,7 @@ export function Partners() {
           title={t('partners.block4Title')}
           description={t('partners.block4Desc')}
           delay={0.15}
-        >
-          <TagList
-            label={t('partners.block4Label')}
-            items={tArray('partners.block4Items')}
-          />
-        </WhyBlock>
+        />
 
         {/* How We Promote Partners */}
         <Subsection title={t('partners.promotionTitle')} delay={0.2}>
@@ -154,8 +122,8 @@ export function Partners() {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {(tArray('partners.tiers') as unknown as { name: string; price: string; description: string }[]).map((tier, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {(tArray('partners.tiers') as unknown as { name: string; price: string; tagline: string; covers: string[]; impact: string }[]).map((tier, i) => (
               <TierCard key={i} tier={tier} index={i} />
             ))}
           </div>
@@ -196,7 +164,7 @@ function WhyBlock({
   title: string
   description: string
   delay: number
-  children: React.ReactNode
+  children?: React.ReactNode
 }) {
   return (
     <motion.div
@@ -214,30 +182,16 @@ function WhyBlock({
             <h3 className="text-xl sm:text-2xl md:text-3xl font-headline font-bold">{title}</h3>
           </div>
         </div>
-        <p className="text-base sm:text-lg text-gray-300 font-body leading-relaxed mb-8 ml-0 sm:ml-12">
+        <p className={`text-base sm:text-lg text-gray-300 font-body leading-relaxed ml-0 sm:ml-12 ${children ? 'mb-8' : ''}`}>
           {description}
         </p>
-        <div className="ml-0 sm:ml-12">
-          {children}
-        </div>
+        {children && (
+          <div className="ml-0 sm:ml-12">
+            {children}
+          </div>
+        )}
       </div>
     </motion.div>
-  )
-}
-
-function TagList({ label, items }: { label: string; items: string[] }) {
-  return (
-    <div>
-      <h4 className="text-sm uppercase tracking-wider text-electric font-headline font-bold mb-4">{label}</h4>
-      <ul className="space-y-2.5">
-        {items.map((item, i) => (
-          <li key={i} className="flex items-start gap-2 text-gray-300 font-body text-sm leading-relaxed">
-            <span className="text-electric mt-0.5 text-xs">&#9679;</span>
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
   )
 }
 
@@ -308,14 +262,18 @@ function PromoCard({
 }
 
 const TIER_COLORS = [
-  { border: '#CD7F32', shadow: 'rgba(205, 127, 50, 0.35)', text: '#CD7F32' },
-  { border: '#C0C0C0', shadow: 'rgba(192, 192, 192, 0.35)', text: '#C0C0C0' },
-  { border: '#FFD700', shadow: 'rgba(255, 215, 0, 0.35)', text: '#FFD700' },
+  { border: '#00D1FF', shadow: 'rgba(0, 209, 255, 0.35)', text: '#00D1FF' }, // Nutrition (Water/Energy)
+  { border: '#C0C0C0', shadow: 'rgba(192, 192, 192, 0.35)', text: '#C0C0C0' }, // Equipment (Silver)
+  { border: '#A855F7', shadow: 'rgba(168, 85, 247, 0.35)', text: '#A855F7' }, // Brand & Media (Creative)
+  { border: '#FF4D00', shadow: 'rgba(255, 77, 0, 0.35)', text: '#FF4D00' }, // Safety (Rescue Orange)
+  { border: '#10B981', shadow: 'rgba(16, 185, 129, 0.35)', text: '#10B981' }, // Operations (Success Green)
+  { border: '#FFD700', shadow: 'rgba(255, 215, 0, 0.35)', text: '#FFD700' }, // Mission (Gold/Crown)
 ];
 
-function TierCard({ tier, index }: { tier: { name: string; price: string; description: string }; index: number }) {
+function TierCard({ tier, index }: { tier: { name: string; price: string; tagline: string; covers: string[]; impact: string }; index: number }) {
+  const { t } = useT();
   const [hovered, setHovered] = React.useState(false);
-  const colors = TIER_COLORS[index];
+  const colors = TIER_COLORS[index] || TIER_COLORS[0];
 
   return (
     <motion.div
@@ -323,7 +281,7 @@ function TierCard({ tier, index }: { tier: { name: string; price: string; descri
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="bg-zinc-900/50 border p-5 sm:p-8 flex flex-col items-center text-center cursor-pointer"
+      className="bg-zinc-900/50 border p-5 sm:p-8 flex flex-col cursor-pointer h-full"
       style={{
         borderColor: hovered ? colors.border : 'rgba(255,255,255,0.05)',
         boxShadow: hovered ? `0 0 20px ${colors.shadow}, 0 0 40px ${colors.shadow}` : 'none',
@@ -332,24 +290,47 @@ function TierCard({ tier, index }: { tier: { name: string; price: string; descri
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <DollarSign
-        className="w-10 h-10 mb-4 transition-colors duration-300"
-        style={{ color: hovered ? colors.text : '#0066FF' }}
-      />
-      <h5
-        className="text-xl font-headline font-bold mb-3 transition-colors duration-300"
-        style={{ color: hovered ? colors.text : '#FFFFFF' }}
-      >
-        {tier.name}
-      </h5>
-      <p className="text-sm text-gray-400 font-body leading-relaxed mb-4">
-        {tier.description}
-      </p>
-      <div
-        className="text-4xl font-headline font-black transition-colors duration-300"
-        style={{ color: hovered ? colors.text : '#0066FF' }}
-      >
-        {tier.price}
+      <div className="flex flex-col items-center text-center mb-6">
+        <DollarSign
+          className="w-10 h-10 mb-4 transition-colors duration-300"
+          style={{ color: hovered ? colors.text : '#0066FF' }}
+        />
+        <h5
+          className="text-xl sm:text-2xl font-headline font-bold mb-2 transition-colors duration-300"
+          style={{ color: hovered ? colors.text : '#FFFFFF' }}
+        >
+          {tier.name}
+        </h5>
+        <div
+          className="text-3xl sm:text-4xl font-headline font-black transition-colors duration-300 mb-3"
+          style={{ color: hovered ? colors.text : '#0066FF' }}
+        >
+          {tier.price}
+        </div>
+        <p className="text-sm font-bold text-white font-body leading-relaxed">
+          {tier.tagline}
+        </p>
+      </div>
+
+      <div className="flex-1">
+        <div className="mb-6">
+          <h6 className="text-xs uppercase tracking-widest text-electric font-headline font-bold mb-3">{t('partners.coversLabel')}</h6>
+          <ul className="space-y-2">
+            {tier.covers.map((item, i) => (
+              <li key={i} className="flex items-start gap-2 text-xs text-gray-300 font-body leading-relaxed">
+                <span className="text-electric mt-1 flex-shrink-0">•</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h6 className="text-xs uppercase tracking-widest text-electric font-headline font-bold mb-2">{t('partners.impactLabel')}</h6>
+          <p className="text-xs text-gray-400 font-body leading-relaxed italic">
+            {tier.impact}
+          </p>
+        </div>
       </div>
     </motion.div>
   );
