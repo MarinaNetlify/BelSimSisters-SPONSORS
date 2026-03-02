@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Users, Award, Building2, Heart, Layers, MapPin, Clock, DollarSign } from 'lucide-react'
+import { Users, Award, Building2, Heart, Layers, MapPin, Clock } from 'lucide-react'
 import { useT } from '../i18n/LanguageContext'
 import { useSponsorOverlay } from './SponsorOverlayContext'
 
@@ -291,10 +291,6 @@ function TierCard({ tier, index }: { tier: { name: string; price: string; taglin
       onMouseLeave={() => setHovered(false)}
     >
       <div className="flex flex-col items-center text-center mb-6">
-        <DollarSign
-          className="w-10 h-10 mb-4 transition-colors duration-300"
-          style={{ color: hovered ? colors.text : '#0066FF' }}
-        />
         <h5
           className="text-xl sm:text-2xl font-headline font-bold mb-2 transition-colors duration-300"
           style={{ color: hovered ? colors.text : '#FFFFFF' }}
