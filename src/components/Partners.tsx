@@ -7,6 +7,11 @@ import { useSponsorOverlay } from './SponsorOverlayContext'
 export function Partners() {
   const { t, tArray } = useT()
   const { showOverlay } = useSponsorOverlay()
+  const fundraisingGoalTotal = 60000
+  const fundraisingRaised = 980
+  const fundraisingProgress = Math.min((fundraisingRaised / fundraisingGoalTotal) * 100, 100)
+  const formattedRaised = new Intl.NumberFormat(undefined).format(fundraisingRaised)
+  const formattedGoal = new Intl.NumberFormat(undefined).format(fundraisingGoalTotal)
 
   return (
     <section className="py-16 sm:py-24 md:py-32 bg-zinc-950 text-white relative overflow-hidden z-0">
@@ -128,6 +133,24 @@ export function Partners() {
               <p className="text-sm sm:text-base text-gray-300 font-body mt-2 leading-relaxed">
                 {t('hero.fundraisingDesc')}
               </p>
+              <div className="mt-4">
+                <div className="flex items-center justify-between text-xs sm:text-sm text-gray-300 font-body">
+                  <span>{t('hero.fundraisingRaisedLabel')}</span>
+                  <span className="text-white font-semibold">€{formattedRaised} / €{formattedGoal}</span>
+                </div>
+                <div
+                  className="mt-2 h-2.5 sm:h-3 bg-white/10 rounded-full overflow-hidden"
+                  role="progressbar"
+                  aria-valuenow={Math.round(fundraisingProgress)}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                >
+                  <div
+                    className="h-full bg-electric transition-all duration-500"
+                    style={{ width: `${fundraisingProgress}%` }}
+                  />
+                </div>
+              </div>
             </div>
           </motion.div>
 
