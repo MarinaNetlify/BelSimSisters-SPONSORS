@@ -3,7 +3,7 @@ export type Language = 'en' | 'ru' | 'by';
 export const translations = {
   en: {
     nav: {
-      donate: 'BECOME A SPONSOR',
+      sponsor: 'BECOME A SPONSOR',
     },
     hero: {
       line1: 'WE SWIM.',
@@ -216,7 +216,7 @@ export const translations = {
   },
   ru: {
     nav: {
-      donate: 'СТАТЬ СПОНСОРОМ',
+      sponsor: 'СТАТЬ СПОНСОРОМ',
     },
     hero: {
       line1: 'МЫ ПЛЫВЁМ.',
@@ -429,7 +429,7 @@ export const translations = {
   },
   by: {
     nav: {
-      donate: 'СТАЦЬ СПОНСАРАМ',
+      sponsor: 'СТАЦЬ СПОНСАРАМ',
     },
     hero: {
       line1: 'МЫ ПЛЫВЕМ.',

@@ -8,7 +8,7 @@ export function Partners() {
   const { t, tArray } = useT()
   const { showOverlay } = useSponsorOverlay()
   const fundraisingGoalTotal = 60000
-  const fundraisingRaised = 980
+  const fundraisingRaised = 1370
   const fundraisingProgress = Math.min((fundraisingRaised / fundraisingGoalTotal) * 100, 100)
   const formattedRaised = new Intl.NumberFormat(undefined).format(fundraisingRaised)
   const formattedGoal = new Intl.NumberFormat(undefined).format(fundraisingGoalTotal)
