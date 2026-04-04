@@ -69,7 +69,7 @@ export function Navigation() {
             onClick={showOverlay}
             className="px-3 md:px-6 py-1.5 md:py-2 bg-electric text-white font-headline font-bold text-[10px] md:text-sm tracking-wider hover:bg-white hover:text-black transition-colors duration-300 md:skew-x-[-10deg] ml-1 sm:ml-2 cursor-pointer"
           >
-            <span className="block md:skew-x-[10deg]">{t('nav.donate')}</span>
+            <span className="block md:skew-x-[10deg]">{t('nav.sponsor')}</span>
           </button>
         </div>
       </div>
