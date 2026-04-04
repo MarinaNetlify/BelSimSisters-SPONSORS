@@ -37,6 +37,7 @@ export const translations = {
     partners: {
       title1: 'Why Become',
       title2: 'Our Partner',
+      ourPartnersTitle: 'Our Partners',
       block1Title: 'Access to an Active Professional Community',
       block1Desc: 'The project brings together people for whom sport is part of a systematic approach to life.',
       block2Title: 'A Reputational Asset, Not a Placement',
@@ -250,6 +251,7 @@ export const translations = {
     partners: {
       title1: 'Почему стоит стать',
       title2: 'нашим партнёром',
+      ourPartnersTitle: 'Наши партнёры',
       block1Title: 'Доступ к активному профессиональному сообществу',
       block1Desc: 'Проект объединяет людей, для которых спорт — часть системного подхода к жизни.',
       block2Title: 'Репутационный актив, а не размещение',
@@ -463,6 +465,7 @@ export const translations = {
     partners: {
       title1: 'Чаму варта стаць',
       title2: 'нашым партнёрам',
+      ourPartnersTitle: 'Нашы партнёры',
       block1Title: 'Доступ да актыўнай прафесійнай суполкі',
       block1Desc: 'Праект аб\'ядноўвае людзей, для якіх спорт — частка сістэмнага падыходу да жыцця.',
       block2Title: 'Рэпутацыйны актыў, а не размяшчэнне',

@@ -24,6 +24,34 @@ export function Partners() {
           </h2>
         </div>
 
+        {/* Our Partners logos */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-16 sm:mb-20"
+        >
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-headline font-bold mb-4">
+            {t('partners.ourPartnersTitle')}
+          </h3>
+          <div className="w-16 h-1 bg-electric mb-10" />
+          <div className="flex flex-wrap items-center gap-8 sm:gap-12">
+            <a
+              href="https://www.sbrsportsinc.com/collections/triswim"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block opacity-80 hover:opacity-100 transition-opacity duration-300"
+            >
+              <img
+                src="/images/triswim-logo.svg"
+                alt="TRISWIM — After-Swim Hair & Skin Care"
+                className="h-12 sm:h-16 w-auto"
+              />
+            </a>
+          </div>
+        </motion.div>
+
         {/* Block 1: Community access */}
         <WhyBlock
           number={1}
