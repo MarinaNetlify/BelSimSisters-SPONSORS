@@ -3,7 +3,7 @@ export type Language = 'en' | 'ru' | 'by';
 export const translations = {
   en: {
     nav: {
-      sponsor: 'BECOME A SPONSOR',
+      sponsor: 'SUPPORT NOW',
     },
     hero: {
       line1: 'WE SWIM.',
@@ -165,7 +165,7 @@ export const translations = {
         }
       ],
       tiersNote: 'Packages can be customized individually for each partner',
-      ctaButton: 'BECOME A SPONSOR',
+      ctaButton: 'SUPPORT NOW',
       overlayMessage: 'Please reach out to a BelSwimSister to agree on the sponsorship package',
       emailButton: 'Email Us',
     },
@@ -208,7 +208,7 @@ export const translations = {
     cta: {
       title: 'BE PART OF HISTORY',
       desc: 'Join us as a sponsor, partner, or supporter. Help us prove that impossible is just a word.',
-      button: 'BECOME A SPONSOR',
+      button: 'SUPPORT NOW',
       contact: 'CONTACT:',
     },
     footer: {
@@ -217,7 +217,7 @@ export const translations = {
   },
   ru: {
     nav: {
-      sponsor: 'СТАТЬ СПОНСОРОМ',
+      sponsor: 'ПОДДЕРЖАТЬ',
     },
     hero: {
       line1: 'МЫ ПЛЫВЁМ.',
@@ -379,7 +379,7 @@ export const translations = {
         }
       ],
       tiersNote: 'Пакеты могут формироваться индивидуально под каждого партнера',
-      ctaButton: 'СТАТЬ СПОНСОРОМ',
+      ctaButton: 'ПОДДЕРЖАТЬ',
       overlayMessage: 'Пожалуйста, свяжитесь с BelSwimSister для согласования спонсорского пакета',
       emailButton: 'Написать нам',
     },
@@ -422,7 +422,7 @@ export const translations = {
     cta: {
       title: 'СТАНЬ ЧАСТЬЮ ИСТОРИИ',
       desc: 'Присоединяйтесь как спонсор, партнёр или поддерживающий. Помогите нам доказать, что невозможное — просто слово.',
-      button: 'СТАТЬ СПОНСОРОМ',
+      button: 'ПОДДЕРЖАТЬ',
       contact: 'КОНТАКТ:',
     },
     footer: {
@@ -431,7 +431,7 @@ export const translations = {
   },
   by: {
     nav: {
-      sponsor: 'СТАЦЬ СПОНСАРАМ',
+      sponsor: 'ПАДТРЫМАЦЬ',
     },
     hero: {
       line1: 'МЫ ПЛЫВЕМ.',
@@ -593,7 +593,7 @@ export const translations = {
         }
       ],
       tiersNote: 'Пакеты могуць фарміравацца індывідуальна пад кожнага партнёра',
-      ctaButton: 'СТАЦЬ СПОНСАРАМ',
+      ctaButton: 'ПАДТРЫМАЦЬ',
       overlayMessage: 'Калі ласка, звяжыцеся з BelSwimSister для ўзгаднення спонсарскага пакета',
       emailButton: 'Напісаць нам',
     },
@@ -636,7 +636,7 @@ export const translations = {
     cta: {
       title: 'СТАНЬ ЧАСТКАЙ ГІСТОРЫІ',
       desc: 'Далучайцеся як спонсар(-ка) або партнёр(-ка).',
-      button: 'СТАЦЬ СПОНСАРАМ',
+      button: 'ПАДТРЫМАЦЬ',
       contact: 'КАНТАКТ:',
     },
     footer: {
