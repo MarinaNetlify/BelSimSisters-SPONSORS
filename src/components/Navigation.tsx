@@ -4,14 +4,12 @@ import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
 import { Instagram } from 'lucide-react'
 import { useLanguage, useT } from '../i18n/LanguageContext'
 import { Language } from '../i18n/translations'
-import { useSponsorOverlay } from './SponsorOverlayContext'
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const { scrollY } = useScroll()
   const { language, setLanguage } = useLanguage()
   const { t } = useT()
-  const { showOverlay } = useSponsorOverlay()
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     setIsScrolled(latest > 50)
@@ -65,12 +63,14 @@ export function Navigation() {
             <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
           </a>
 
-          <button
-            onClick={showOverlay}
+          <a
+            href="https://www.paypal.com/ncp/payment/79CVY7287UKXA"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-3 md:px-6 py-1.5 md:py-2 bg-electric text-white font-headline font-bold text-[10px] md:text-sm tracking-wider hover:bg-white hover:text-black transition-colors duration-300 md:skew-x-[-10deg] ml-1 sm:ml-2 cursor-pointer"
           >
             <span className="block md:skew-x-[10deg]">{t('nav.sponsor')}</span>
-          </button>
+          </a>
         </div>
       </div>
     </motion.nav>
