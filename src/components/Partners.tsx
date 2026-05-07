@@ -2,11 +2,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Users, Award, Building2, Heart, Layers, MapPin, Clock } from 'lucide-react'
 import { useT } from '../i18n/LanguageContext'
-import { useSponsorOverlay } from './SponsorOverlayContext'
 
 export function Partners() {
   const { t, tArray } = useT()
-  const { showOverlay } = useSponsorOverlay()
   const fundraisingGoalTotal = 60000
   const fundraisingRaised = 1370
   const fundraisingProgress = Math.min((fundraisingRaised / fundraisingGoalTotal) * 100, 100)
@@ -166,12 +164,14 @@ export function Partners() {
             transition={{ delay: 0.2 }}
             className="mt-12 flex justify-center"
           >
-            <button
-              onClick={showOverlay}
+            <a
+              href="https://www.paypal.com/ncp/payment/79CVY7287UKXA"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-electric text-white px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl md:text-2xl font-headline font-bold tracking-wider hover:bg-white hover:text-black transition-colors duration-300 skew-x-[-10deg] shadow-2xl cursor-pointer"
             >
               <span className="block skew-x-[10deg]">{t('partners.ctaButton')}</span>
-            </button>
+            </a>
           </motion.div>
         </Subsection>
       </div>
